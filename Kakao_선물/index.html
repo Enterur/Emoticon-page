@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎁 깜짝 선물 🎁</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="🎁 깜짝 선물! 김민님이 선물을 보냈습니다!">
+<meta property="og:description" content="버튼을 눌러 확인해 보세요.">
+<meta property="og:image" content="emoticonplus.png">
+
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body{
+        font-family:'Apple SD Gothic Neo', 'Malgun Gothic', Arial, sans-serif;
+        background:#F7F7F7;
+        min-height: 100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .card{
+        width:320px;
+        background:#fff;
+        border-radius:20px;
+        box-shadow:0 6px 24px rgba(0,0,0,.10);
+        padding:28px 24px 28px;
+        text-align:center;
+    }
+    .img-wrap{
+        background: #E8F3FF;
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 28px;
+    }
+    .img-wrap img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+    }
+    .title {
+        font-size: 22px;
+        font-weight: 800;
+        color: #1A1A1A;
+        line-height: 1.35;
+        margin-bottom: 10px;
+    }
+    .subtitle {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 28px;
+    }
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 16px;
+        background: #FEE500;
+        border: none;
+        border-radius: 12px;
+        font-size: 17px;
+        font-weight: 800;
+        color: #3C1E1E;
+        cursor: pointer;
+        letter-spacing: -0.3px;
+    }
+    .btn:hover { opacity: 0.88; }
+    .btn:active { transform: scale(0.98); }
+    #hooked-screen {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #fff;
+        text-align: center;
+        padding: 40px 24px;
+    }
+    #hooked-screen h1 {
+        font-size: 34px;
+        margin-bottom: 16px;
+        color: #1A1A1A;
+    }
+      #hooked-screen p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.8;
+    }
+</style>
+</head>
+<body>
+
+<div class="card" id="main-card">
+    <div class="img-wrap">
+        <img src="emoticonplus.png" alt="이모티콘 플러스 12개월">
+    </div>
+
+    <div class="title">🎉🎁 깜짝 선물!<br>김민님이 선물을<br>보냈습니다!</div>
+    <div class="subtitle">버튼을 눌러 확인해 보세요.</div>
+
+    <button class="btn" onclick="hooked()">선물 확인하기</button>
+</div>
+
+<div id="hooked-screen">
+    <h1>😂 낚였지롱!</h1>
+    <p>バカ～ 笑笑笑</p>
+</div>
+
+<script>
+function hooked(){
+    document.getElementById('main-card').style.display = 'none';
+    const s = document.getElementById('hooked-screen');
+    s.style.display = 'flex';
+}
+</script>
+</body>
+</html>
